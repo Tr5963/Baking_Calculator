@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Financial_Calculator</string>
+    <string name="egg">egg</string>
+    <string name="butter">butter</string>
+    <string name="milk">milk</string>
+    <string name="starter">starter</string>
+    <string name="yogurt">yogurt</string>
+    <string name="custom">Add custom</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">close drawer</string>
 </resources>
