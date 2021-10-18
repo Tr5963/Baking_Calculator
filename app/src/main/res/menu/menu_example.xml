@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/egg"
+        android:title="@string/egg" />
+    <item android:id="@+id/butter"
+        android:title="@string/butter"/>
+    <item android:id="@+id/milk"
+        android:title="@string/milk" />
+    <item android:id="@+id/starter"
+        android:title="@string/starter" />
+    <item android:id="@+id/yogurt"
+        android:title="@string/yogurt" />
+    <item android:id="@+id/custom"
+        android:title="@string/custom" />
+</menu>

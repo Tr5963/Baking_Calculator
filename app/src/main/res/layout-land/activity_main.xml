@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mainactivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested"
+                android:layout_width="499dp"
+                android:layout_height="155dp"
+                android:fillViewport="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="-9dp">
+
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/flour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="flour"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:ems="10"
+                        android:hint="water"
+                        android:inputType="number" />
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <Button
+                android:id="@+id/btnShow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calculatehydration"
+                android:text="calc" />
+
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showpopup"
+                android:text="Add ingredient" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jesus"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_below="@id/nested"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="19dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="5dp">
+
+            <TextView
+                android:id="@+id/texting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/customview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/textView2"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Name..." />
+
+                <EditText
+                    android:id="@+id/textView"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Water percentage" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="194dp"
+                    android:layout_height="60dp"
+                    android:onClick="addcustom"
+                    android:text="Add" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nvView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_view" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
